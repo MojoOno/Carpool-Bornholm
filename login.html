@@ -6,21 +6,43 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="css/muted-background.css" rel="stylesheet">
 </head>
 
 <body class="d-flex h-100 text-center">
 <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
-    <div class="bg"
-         style="background-image: url('images/bornholm-kort.jpg'); background-size: cover; background-position: center; min-height: 100vh">
+    <div class="bg">
         <header class="mb-auto">
             <div><img class="img-fluid mx-auto d-block" src="images/carpool_topbanner.jpg" alt="Top banner"></div>
         </header>
-        <main class="cover-container bg-black p-3 h-100">
+        <main class="p-3 h-100">
+            <div class="d-flex align-items-center flex-column p-5">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"></label>
+                        <input type="email" class="form-control form-control-lg fst-italic bg-warning bg-gradient"
+                               id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Indtast email">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"></label>
+                        <input type="password" class="form-control form-control-lg fst-italic bg-warning bg-gradient"
+                               id="exampleInputPassword1" placeholder="Indtast kode">
+                    </div>
+                </form>
+                <div class="d-flex align-items-end mt-5 p-2">
+                    <a href="driver-passenger-menu.html" class="form-control btn btn-lg btn-success mt-5"
+                       style="width: max(80vw)">
+                        Login
+                    </a>
+                </div>
+            </div>
+
 
         </main>
     </div>
-
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
