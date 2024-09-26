@@ -17,23 +17,23 @@
         </header>
         <main class="d-flex flex-column align-items-center p-3 h-100" id="main-content">
             <div class="card my-5" style="width: 18rem;">
-                <div class="card-header">
+                <div class="card-header bg-warning">
                     Fra <span id="fra-by">by</span> til Rønne
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Nexø - 08:00 - Mikkel</li>
-                    <li class="list-group-item">Nexø - 09:00 - Hans</li>
-                    <li class="list-group-item">Nexø - 10:00 - John</li>
+                    <li class="list-group-item bg-warning bg-opacity-50">08:00 - Mikkel</li>
+                    <li class="list-group-item bg-warning bg-opacity-50">09:00 - Hans</li>
+                    <li class="list-group-item bg-warning bg-opacity-50">10:00 - John</li>
                 </ul>
             </div>
             <div class="card my-5" style="width: 18rem;">
-                <div class="card-header">
+                <div class="card-header bg-warning">
                     Fra Rønne til <span id="til-by">by</span>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Nexø - 14:00 - Mikkel</li>
-                    <li class="list-group-item">Nexø - 15:00 - Hans</li>
-                    <li class="list-group-item">Nexø - 17:00 - John</li>
+                    <li class="list-group-item bg-warning bg-opacity-50">14:00 - Mikkel</li>
+                    <li class="list-group-item bg-warning bg-opacity-50">15:00 - Hans</li>
+                    <li class="list-group-item bg-warning bg-opacity-50">17:00 - John</li>
                 </ul>
             </div>
 
@@ -49,21 +49,15 @@
 
 <script type="application/javascript">
     const queryParameters = new URLSearchParams(window.location.search)
-    if (urlParams.get('city') != null){
-        document.getElementById('fra-by').innerText = urlParams.get('city');
-        document.getElementById('til-by').innerText = urlParams.get('city');
-
+    if (queryParameters.get('city') != null){
+        document.getElementById('fra-by').innerText = queryParameters.get('city');
+        document.getElementById('til-by').innerText = queryParameters.get('city');
     }
     // iterate over all parameters
     for (const parameter of queryParameters) {
         console.log(parameter)
         const elementToBeAdded = document.createElement("p");
-        if(parameter[0]=="city"){
-            const varElement = document.getElementById("customername");
-            varElement.innerText =parameter[1];
-        }else{
-            elementToBeAdded.innerText =parameter[0]+": "+parameter[1];
-        }
+        elementToBeAdded.innerText =parameter[0]+": "+parameter[1];
         const mainContent = document.getElementById("main-content");
         mainContent.appendChild(elementToBeAdded);
 
