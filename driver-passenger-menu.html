@@ -12,46 +12,50 @@
 <body class="d-flex h-100 text-center">
 <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
     <div class="bg">
-        <header>
+        <header class="mb-auto">
             <div>
                 <img class="img-fluid mx-auto d-block" src="images/carpool_topbanner.jpg" alt="Top banner">
             </div>
         </header>
-        <form action="booking-menu.html" method="post">
-            <main class="p-3 h-100">
+        <form action="booking-menu.html" method="get">
+            <main class="p-3">
                 <div class="d-flex align-items-center flex-column p-5" style="height: 500px;">
                     <div class="mb-auto p-2">
                         <div class="d-flex flex-column gap-5">
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                                <input type="radio" class="btn-check" name="driver" id="btnradio1" autocomplete="off">
                                 <label class="btn btn-outline-warning btn-lg" for="btnradio1">Chauffør</label>
 
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"
+                                <input type="radio" class="btn-check" name="passenger" id="btnradio2" autocomplete="off"
                                        checked>
                                 <label class="btn btn-outline-warning btn-lg" for="btnradio2">Passager</label>
                             </div>
 
-                            <select class="form-select form-select-lg bg-warning" aria-label="Default select example">
+                            <select class="form-select form-select-lg bg-warning" aria-label="Default select example"
+                                    name="city">
                                 <option selected>Hvor kører du fra?</option>
-                                <option value="2">Åkirkeby</option>
-                                <option value="3">Nexø</option>
-                                <option value="3">Gudhjem</option>
+                                <option value="Åkirkeby">Åkirkeby</option>
+                                <option value="Nexø">Nexø</option>
+                                <option value="Gudhjem">Gudhjem</option>
                             </select>
 
                             <div class="input-group input-group-lg">
                                 <input type="date" class="form-control bg-warning" aria-label="Sizing example input"
-                                       aria-describedby="inputGroup-sizing-lg">
+                                       aria-describedby="inputGroup-sizing-lg" name="date">
                             </div>
                         </div>
 
                     </div>
                 </div>
                 <div class="p-2">
-                    <a href="driver-passenger-menu.html" class="form-control btn btn-lg btn-success">
-                        Forsæt
-                    </a>
+                    <input type="submit" value="Forsæt" class="form-control btn btn-lg btn-success">
                 </div>
             </main>
+            <footer class="mt-auto">
+                <div class="p-2">
+                    <input type="submit" value="Forsæt" class="form-control btn btn-lg btn-success">
+                </div>
+            </footer>
         </form>
     </div>
 
