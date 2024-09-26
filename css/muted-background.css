@@ -1,0 +1,37 @@
+.bg {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Create a pseudo-element to hold the background image and dark overlay */
+.bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1; /* Ensure the overlay stays behind the content */
+}
+
+/* Add the background image in a separate layer */
+.bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bornholm-kort.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.20; /* Set opacity of the background image */
+    z-index: 0; /* Image should stay behind the overlay */
+}
+
+/* Ensure content like header stays above both the background and the overlay */
+.bg > * {
+    position: relative;
+    z-index: 2;
+}
