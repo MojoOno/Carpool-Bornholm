@@ -49,7 +49,7 @@
 
 <script type="application/javascript">
     const queryParameters = new URLSearchParams(window.location.search)
-    if (queryParameters.get('city') != null){
+    if (queryParameters.get('city') != null) {
         document.getElementById('fra-by').innerText = queryParameters.get('city');
         document.getElementById('til-by').innerText = queryParameters.get('city');
     }
@@ -57,7 +57,7 @@
     for (const parameter of queryParameters) {
         console.log(parameter)
         const elementToBeAdded = document.createElement("p");
-        elementToBeAdded.innerText =parameter[0]+": "+parameter[1];
+        elementToBeAdded.innerText = parameter[0] + ": " + parameter[1];
         const mainContent = document.getElementById("main-content");
         mainContent.appendChild(elementToBeAdded);
 
